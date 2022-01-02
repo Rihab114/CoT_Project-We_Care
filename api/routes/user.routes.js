@@ -1,27 +1,43 @@
-var express = require('express');
-var router = express.Router();
-var IdentityProvider = require('../controller/identity.provider')
-/* GET users listing. */
+var mongoose = require('mongoose')
 
-var identityProvider = new IdentityProvider();
+var userSchema = new mongoose.Schema(
+    {
+        surname : String,
+        forename: String,
+        username: {type:String, required:true, unique:true},
+        password: {type:String, required:true},
+        permissionLevel : Number,
+        role:{type:String, enum:["admin","surfer","member"]},
+        location:String,
+        meta:{age:Number,website:String},
+        created_at:{type:Date, default:Date.Now},
+        updated_at:{type:Date, default:Date.Now}
+    });
 
-router.get('/',[identityProvider.getUsers]);
+    userSchema.statics.createIdentity = (infos)=> {
+    const user = new mongoose.model("User", userSchema)(infos);
+    return user.save();
+};
 
-router.post('/register',[identityProvider.signUp]);
+userSchema.virtual('id').get(function (){
+    return this._id.toHexString();
+});
 
-router.post('/login',[identityProvider.signIn]);
+userSchema.set('toJSON',{virtuals : true});
 
-router.post('/authorize',[identityProvider.PreSignIn]);
+userSchema.statics.sayHello=function(){
+    return "Hello"+this.forename+" "+this.surname;
+};
 
-router.post('/oauth/token',[identityProvider.PostSignIn]);
+userSchema.statics.findByUsername = (username)=> {
+    return mongoose.model("User", userSchema).find({username : username});
+};
 
-router.post('/oauth/token/refresh',[identityProvider.RefreshSignIn]);
-
-router.post('/profile',[identityProvider.getUser]); 
-
-router.delete('/delete',[identityProvider.DeleteUser]);
-
-router.put('/update',[identityProvider.UpdateUser]);
+userSchema.statics.Delete = (id)=> {
+    console.log(id)
+    return mongoose.model("User", userSchema).deleteOne({_id : ObjectId(id)});
+}
 
 
-module.exports = router;
+
+module.exports = mongoose.model('User',userSchema);
