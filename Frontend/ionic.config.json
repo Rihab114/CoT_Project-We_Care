@@ -1,0 +1,7 @@
+{
+  "name": "We-care",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
