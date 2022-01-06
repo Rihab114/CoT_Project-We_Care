@@ -1,0 +1,4 @@
+{
+    "mongoURI":  "mongodb+srv://rihab:Rihab12345!@cluster0.rkekx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "secretOrKey": "secret"
+}
