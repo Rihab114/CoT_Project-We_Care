@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const passport = require("passport");
-const usersRouter = require("./routes/api/users");
+const usersRouter = require("../api/routes/api/users.js");
 const config = require('config');
 const app = express();
 const fs = require("fs");
@@ -11,13 +11,13 @@ const key_file = process.env.KEY_FILE
 const cert_file = process.env.CERT_FILE 
 
 
-const options = {
-  key: fs.readFileSync(key_file),
-  cert: fs.readFileSync(cert_file),
+//const options = {
+// key: fs.readFileSync(key_file),
+// cert: fs.readFileSync(cert_file),
  
-}
+//}
 
-const server = tls.createServer(options, app);
+//const server = tls.createServer(options, app);
 // Body parser middleware
 app.use(
     express.urlencoded({
@@ -54,12 +54,14 @@ if (process.env.NODE_ENV = "production") {
 }
  */
 
+//const port = process.env.PORT || 5000;
+//server.listen(port, (error)=>{
+    //if (error){
+        //console.log("An error occured", error);
+    //}
+    //else {
+        ///console.log("Server Successfuly connected");
+    //}
+//});
 const port = process.env.PORT || 5000;
-server.listen(port, (error)=>{
-    if (error){
-        console.log("An error occured", error);
-    }
-    else {
-        console.log("Server Successfuly connected");
-    }
-});
+app.listen(port, () => console.log(`Server up and running on port ${port} !`));

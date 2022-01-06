@@ -1,7 +1,6 @@
 {
   "name": "wecare",
   "version": "1.0.0",
-  "description": "Login authentication system using MERN Stack",
   "main": "server.js",
   "scripts": {
     "start": "nodemon --tls-min-v1.3 --tls-cipher-list=TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256 server.js",
@@ -27,6 +26,8 @@
     "mongoose": "^5.8.11",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-bootstrap": "^2.1.0",
+    "react-flippy": "^1.1.0",
     "spdy": "^4.0.2",
     "validator": "^13.7.0"
   },

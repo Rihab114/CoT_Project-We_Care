@@ -5,11 +5,11 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 
 //Load Input Validation
-const validateRegisterInput = require('../../validation/register');
-const validateLoginInput = require('../../validation/login');
+const validateRegisterInput = require('../../../api/validation/register');
+const validateLoginInput = require('../../../api/validation/login');
 
 // Load User model
-const User = require('../../models/User');
+const User = require('../../../api/models/User');
 
 //Post Router api/users/register
 Router.post('/register', (req, res) => {

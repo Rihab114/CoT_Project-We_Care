@@ -35,3 +35,11 @@
 .dashboard .content h1, .dashboard .content h3 {
     font-weight: bolder;
 }
+.dashboard .content h2 {
+    color: #f73535 !important; 
+    font-weight: bolder;
+}
+.dashboard .content h4 {
+    color: #76fcdf !important; 
+    font-weight: bolder;
+}
