@@ -8,7 +8,8 @@ It's about a pet contol  application using cloud of things.. Our approach is bas
 - Middleware : Node.js
 - Backend : Raspberry pi 4 , mosquitto
 - Database : mongoDB
-![architecture]
+![architecture]![image](https://user-images.githubusercontent.com/75638904/148512609-ee9c30a2-6cea-4846-87cc-65a4e868b1b4.png)
+
 ## Technical documentation 
 
 ### how to install SmartAlarm ?
@@ -33,6 +34,7 @@ It's about a pet contol  application using cloud of things.. Our approach is bas
 - This server is secured with a Wildard SSL certificate associated with an rsa 4096 key, issued by Let's Encrypt and generated with the following command:
 `sudo certbot certonly --manual -d *.$cotsmartalarm.me -d $cotsmartalarm.me --agree-tos --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory --register-unsafely-without-email --rsa-key-size 4096`
 
-![certif]
+![certif]![SSLabA](https://user-images.githubusercontent.com/75638904/148512671-9f486f72-ebab-401b-af16-89dfd6755600.PNG)
+
 
 
