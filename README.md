@@ -1,6 +1,10 @@
 # Cloud of Things Application
 ## Description
-It's about a pet contol  application using cloud of things.. Our approach is based on the use of smartphones, with devices such as (alarm, Raspberry Pi board..) as additional peripherals.
+The project objective is to create a system capable of measuring an animal's body temperature and heart rate (ECG: electrocardiogram) 
+then send the measures taken to an application that will process this data and extract the health status of the animal and send a status
+report to the keeper. In case of danger, the application will trigger an alert that will be received by the owner who will intervene to save
+them before reaching any high level complications .
+
 
 ## Technologies
 
