@@ -4,7 +4,7 @@ It's about a pet contol  application using cloud of things.. Our approach is bas
 
 ## Technologies
 
-- Front-End : React
+- Front-End : Ionic-React
 - Middleware : Node.js
 - Backend : Raspberry pi 4 , mosquitto
 - Database : mongoDB
@@ -27,7 +27,7 @@ It's about a pet contol  application using cloud of things.. Our approach is bas
 ######  Client side :
 - Run the application :
 
-`npm  start `
+`ionic serve `
 
 ## Deployment
 - The NodeJS server part is deployed on an Azure virtual machine with an Ubuntu 20.4 OS and accessible via the URL wecarecot.me .
