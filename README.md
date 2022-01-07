@@ -16,7 +16,7 @@ them before reaching any high level complications .
 
 ## Technical documentation 
 
-### how to install SmartAlarm ?
+###  WeCare :
 ######  Server side :
 - Download and Install node.js :
 
