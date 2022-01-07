@@ -1,8 +1,24 @@
 
-In the project directory, you can run:
+# Cloud of Things Application
+## Description
+The project objective is to create a system capable of measuring an animal's body temperature and heart rate (ECG: electrocardiogram) 
+then send the measures taken to an application that will process this data and extract the health status of the animal and send a status
+report to the keeper. In case of danger, the application will trigger an alert that will be received by the owner who will intervene to save
+them before reaching any high level complications .
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+## Technologies
+
+- Front-End : Ionic-React
+- Middleware : Node.js
+- Backend : Raspberry pi 4 , mosquitto
+- Database : mongoDB
+
+
+###  WeCare :
+######  Server side :
+
+- Run the server :
+
+`npm start`
 
