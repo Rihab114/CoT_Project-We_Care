@@ -38,7 +38,8 @@ them before reaching any high level complications .
 - This server is secured with a Wildard SSL certificate associated with an rsa 4096 key, issued by Let's Encrypt and generated with the following command:
 `sudo certbot certonly --manual -d *.$cotsmartalarm.me -d $cotsmartalarm.me --agree-tos --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory --register-unsafely-without-email --rsa-key-size 4096`
 
-![certif]![SSLabA](https://user-images.githubusercontent.com/75638904/148512671-9f486f72-ebab-401b-af16-89dfd6755600.PNG)
+
+![SSLabA](https://user-images.githubusercontent.com/75638904/148512671-9f486f72-ebab-401b-af16-89dfd6755600.PNG)
 
 
 
